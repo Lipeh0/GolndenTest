@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area do Usuario - Golden Razor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/11-painel.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../assets/GoldenRazor_logo.png" alt="Golden Razor Logo" style="width: 100%; height: auto; border-radius: 5px;">
+                <h1>Golden Razor</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#perfil">Meu Perfil</a></li>
+                    <li><a href="#agendamentos">Meus Agendamentos</a></li>
+                    <li><a href="#preferencias">Preferências</a></li>
+                    <li><a href="#logout">Sair</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <main class="main-content">
+            <section id="perfil" class="section">
+                <h2>Meu Perfil</h2>
+                <form id="formPerfil">
+                    <div class="input-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" value="João Silva" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" value="joao@example.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" id="telefone" value="(11) 99999-9999" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Salvar Alterações</button>
+                </form>
+            </section>
+
+            <section id="agendamentos" class="section">
+                <h2>Meus Agendamentos</h2>
+                <div class="agendamentos-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Serviço</th>
+                                <th>Data</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelaAgendamentos">
+              
+                        </tbody>
+                    </table>
+                </div>
+                <button class="btn-primary">Agendar Novo Serviço</button>
+            </section>
+
+            <section id="preferencias" class="section">
+                <h2>Minhas Preferências</h2>
+                <form id="formPreferencias">
+                    <div class="input-group">
+                        <select id="tipo-servico">
+                            <option value="corte">Corte de Cabelo</option>
+                            <option value="barba">Barba</option>
+                            <option value="corte-barba">Corte e Barba</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Salvar Preferências</button>
+                </form>
+            </section>
+        </main>
+    </div>
+<script src="../areaexclusiva/script.js"> </script>
+</body>
+
+</html>
